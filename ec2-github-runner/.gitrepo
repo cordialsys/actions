@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/ingydotnet/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/machulav/ec2-github-runner
+	branch = main
+	commit = 2c4d1dcf2c54673ed3bfd194c4b6919ed396a209
+	parent = 1dda3239e51ddcd3329942692c83b4827ee9ddf0
+	method = merge
+	cmdver = 0.4.6
