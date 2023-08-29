@@ -1,0 +1,18 @@
+# Mix of
+# - <https://github.com/RustCrypto/actions/blob/master/cargo-cache> and
+# - <https://github.com/actions/cache/blob/main/examples.md#rust---cargo>
+---
+name: "cargo-cache"
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
